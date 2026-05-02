@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME NET | Namonet Solution Limited</title>
+    <style>
+        body { 
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0px; 
+            color: white; 
+            background: linear-gradient(rgba(0, 40, 20, 0.85), rgba(0, 40, 20, 0.9)), 
+                        url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") center center / cover no-repeat; 
+            background-attachment: fixed;
+            overflow-x: hidden; 
+        }
+        header { text-align: center; padding: 80px 20px 70px; animation: fadeInUp 1s ease-out; }
+        header h1 { font-size: 46px; margin-bottom: 10px; letter-spacing: 2px; text-transform: uppercase; }
+        header p { font-size: 18px; opacity: 0.9; }
+        section { padding: 20px 20px; max-width: 900px; margin: auto; animation: fadeInUp 1.2s ease; }
+        
+        .card { 
+            background: rgba(255, 255, 255, 0.08); 
+            padding: 25px; 
+            border-radius: 14px; 
+            backdrop-filter: blur(12px); 
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.35); 
+            transition: 0.3s; 
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0px 10px 30px rgba(0,0,0,0.45); }
+        h2 { margin-bottom: 15px; color: rgb(158, 255, 195); border-left: 4px solid rgb(37, 211, 102); padding-left: 15px; }
+
+        .btn { 
+            display: inline-block; 
+            padding: 16px 32px; 
+            background: linear-gradient(135deg, rgb(37, 211, 102), rgb(30, 190, 93)); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            margin-top: 20px; 
+            font-weight: bold; 
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: 0.3s;
+        }
+        .btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .price-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+        }
+        .price-item strong { display: block; font-size: 1.4rem; color: #fff; }
+        .price-item span { color: rgb(158, 255, 195); font-weight: bold; }
+
+        ol li { margin-bottom: 15px; line-height: 1.7; }
+        footer { text-align: center; padding: 40px 20px; background: rgba(0,0,0,0.7); color: #ccc; margin-top: 40px; }
+        
+        .whatsapp-float { 
+            position: fixed; bottom: 20px; right: 20px; background: #25D366; 
+            color: white; border-radius: 50px; padding: 12px 20px; 
+            text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; 
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.4); z-index: 1000;
+        }
+
+        @keyframes fadeInUp { 
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+  <h1>PRIME NET</h1>
+  <p>Fast, Reliable Internet Designed for Your Everyday Life</p>
+  <a class="btn" href="http://connectivitycheck.gstatic.com/generate_204">Connect Now</a>
+</header>
+
+<section>
+  <div class="card">
+    <h2>Our Hotspot Packages</h2>
+    <p>Enjoy speeds of up to <strong>20 Mbps</strong> on any plan. Choose the one that fits your needs:</p>
+    
+    <div class="pricing-grid">
+        <div class="price-item">
+            <span>1 Hour</span>
+            <strong>Ksh 5</strong>
+        </div>
+        <div class="price-item" style="border-color: rgb(37, 211, 102);">
+            <span>24 Hours</span>
+            <strong>Ksh 20</strong>
+        </div>
+        <div class="price-item">
+            <span>7 Days</span>
+            <strong>Ksh 100</strong>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>How to Connect</h2>
+    <ol>
+      <li><strong>Connect to Wi-Fi:</strong> Go to settings and select <strong>PRIME NET</strong>.</li>
+      <li><strong>Open Login:</strong> Tap the notification or click <strong>Connect Now</strong> above.</li>
+      <li><strong>Pay:</strong> Select your package and follow the M-Pesa prompts.</li>
+      <li><strong>Surf:</strong> You will be redirected and connected immediately.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Customer Support</h2>
+    <p><strong>Call / WhatsApp:</strong> 0707683663</p>
+    <p><strong>Email:</strong> issues@namonet.org</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 PRIME NET | A Service by Namonet Solution Limited</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/254707683663">
+  💬 Chat Support
+</a>
+
+</body>
+</html>
