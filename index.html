@@ -5,136 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRIME NET | Namonet Solution Limited</title>
     <style>
-        body { 
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0px; 
-            color: white; 
-            background: linear-gradient(rgba(0, 40, 20, 0.85), rgba(0, 40, 20, 0.9)), 
-                        url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") center center / cover no-repeat; 
-            background-attachment: fixed;
-            overflow-x: hidden; 
-        }
+        body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; margin: 0px; color: white; background: linear-gradient(rgba(0, 40, 20, 0.85), rgba(0, 40, 20, 0.9)), url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") center center / cover no-repeat; background-attachment: fixed; overflow-x: hidden; }
         header { text-align: center; padding: 80px 20px 70px; animation: fadeInUp 1s ease-out; }
         header h1 { font-size: 46px; margin-bottom: 10px; letter-spacing: 2px; text-transform: uppercase; }
         header p { font-size: 18px; opacity: 0.9; }
         section { padding: 20px 20px; max-width: 900px; margin: auto; animation: fadeInUp 1.2s ease; }
-        
-        .card { 
-            background: rgba(255, 255, 255, 0.08); 
-            padding: 25px; 
-            border-radius: 14px; 
-            backdrop-filter: blur(12px); 
-            box-shadow: 0px 6px 20px rgba(0,0,0,0.35); 
-            transition: 0.3s; 
-            border: 1px solid rgba(255,255,255,0.1);
-        }
+        .card { background: rgba(255, 255, 255, 0.08); padding: 25px; border-radius: 14px; backdrop-filter: blur(12px); box-shadow: 0px 6px 20px rgba(0,0,0,0.35); transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
         .card:hover { transform: translateY(-5px); box-shadow: 0px 10px 30px rgba(0,0,0,0.45); }
         h2 { margin-bottom: 15px; color: rgb(158, 255, 195); border-left: 4px solid rgb(37, 211, 102); padding-left: 15px; }
-
-        .btn { 
-            display: inline-block; 
-            padding: 16px 32px; 
-            background: linear-gradient(135deg, rgb(37, 211, 102), rgb(30, 190, 93)); 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 8px; 
-            margin-top: 20px; 
-            font-weight: bold; 
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            transition: 0.3s;
-        }
+        .btn { display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, rgb(37, 211, 102), rgb(30, 190, 93)); color: white; text-decoration: none; border-radius: 8px; margin-top: 20px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); transition: 0.3s; }
         .btn:hover { transform: scale(1.05); filter: brightness(1.1); }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .price-item {
-            text-align: center;
-            padding: 15px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 10px;
-        }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-top: 20px; }
+        .price-item { text-align: center; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; }
         .price-item strong { display: block; font-size: 1.4rem; color: #fff; }
         .price-item span { color: rgb(158, 255, 195); font-weight: bold; }
-
         ol li { margin-bottom: 15px; line-height: 1.7; }
         footer { text-align: center; padding: 40px 20px; background: rgba(0,0,0,0.7); color: #ccc; margin-top: 40px; }
-        
-        .whatsapp-float { 
-            position: fixed; bottom: 20px; right: 20px; background: #25D366; 
-            color: white; border-radius: 50px; padding: 12px 20px; 
-            text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; 
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.4); z-index: 1000;
-        }
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border-radius: 50px; padding: 12px 20px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; box-shadow: 0px 4px 15px rgba(0,0,0,0.4); z-index: 1000; }
+        @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
 
-        @keyframes fadeInUp { 
-          0% { opacity: 0; transform: translateY(20px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
+        .promo-section { padding: 10px 20px 20px; max-width: 900px; margin: auto; animation: fadeInUp 1.1s ease; }
+        .promo-card { background: rgba(255,255,255,0.08); padding: 8px; border-radius: 16px; backdrop-filter: blur(8px); box-shadow: 0 8px 25px rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.12); }
+        .promo-card img { display: block; width: 100%; max-height: 620px; object-fit: contain; border-radius: 12px; }
+
     </style>
 </head>
 <body>
-
 <header>
   <h1>PRIME NET</h1>
   <p>Fast, Reliable Internet Designed for Your Everyday Life</p>
   <a class="btn" href="http://connectivitycheck.gstatic.com/generate_204">Connect Now</a>
 </header>
 
-<section>
-  <div class="card">
-    <h2>Our Hotspot Packages</h2>
-    <p>Enjoy speeds of up to <strong>20 Mbps</strong> on any plan. Choose the one that fits your needs:</p>
-    
-    <div class="pricing-grid">
-        <div class="price-item">
-            <span>1 Hour</span>
-            <strong>Ksh 5</strong>
-        </div>
-        <div class="price-item" style="border-color: rgb(37, 211, 102);">
-            <span>24 Hours</span>
-            <strong>Ksh 20</strong>
-        </div>
-        <div class="price-item">
-            <span>7 Days</span>
-            <strong>Ksh 100</strong>
-        </div>
-    </div>
+<section class="promo-section">
+  <div class="promo-card">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDACweISchHCwnJCcyLyw1Qm9IQj09QohhZlBvoY2ppp6Nm5ixx//Ysbzxv5ib3v/g8f//////rNX/////////////2wBDAS8yMkI6QoJISIL/t5u3////////////////////////////////////////////////////////////////////wgARCAC0ALQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQT/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAF83MxsVrkxpt6KWbSTy9G8+VSZtymdEybxvZjaxiBphoibj8tK+awcXVJ06CTSs6ZkysCazyxfGidOTpSPTDo64zVXVBCVS+E9nkL189edpObStNjUcVV0zbHaVTnq62VViyWW1OcCbaGyOzM59GUtnS9PLRGKc6XOWq22OJYhWuPHZd6+WpRDMsAlkMdcJHWlakVzvbRrcX4rZKhXVabIJZETq52kMqlWRVs7TkMuqbZvM8ts0mPmdPzO7MXXKuk6FoUFkvWpCXdziMOsbOZcpc1htnkX5uyObrrmjbNSwqlE1TVElqjNOiM6xk3apNRYgYdOL9fJXnUSykWptTKhvN0ZES2VLsi+bJ4tuvqFPmYm6iqoprDUnmZZcF1XlYwrSUWslR57VszrjkUQfZPTLacJSeiGmhjZJlUpbNaIYaw87PLybYhNsEJ9aHO9KE1rpyFE1ACTXTZWFaisNqs8wvi05mlTM6ltCo5cJp0BDbYZIXWVA3GAQAjALcAAAAAAN0E0CQ0BcBcAt//EACMQAAICAgICAwEBAQAAAAAAAAABAhESIRAxAyITMkEgQkD/2gAIAQEAAQUCXX8fsz/HUVyy0ZITbG2uYosvhDdG2UPqxzRdx9salSUqx1h7RjXk/fGvaepJ6tcdlcbR0bZSGrTMPS68cnUdZfIhSVObHKSLlVMqN+qV+wtc5HZ2aJSKdyc0ONmCEott0f4l9R68bqp0T+kEOyxllCL4/ZD2eT6eP6eLt5MuoTpqbHtbJXIqTEqJVzRplHkRBbktyZKW37JeqSSbNWmWz2vxqk3Q/IJqt3iuH26pyI9UojlxFn+cGKFOt4o0uLRerviDoXLJt8N0pSsir4f2yUWPyGbIysfd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" alt="Customer Service Week promotion">
   </div>
 </section>
 
-<section>
-  <div class="card">
-    <h2>How to Connect</h2>
-    <ol>
-      <li><strong>Connect to Wi-Fi:</strong> Go to settings and select <strong>PRIME NET</strong>.</li>
-      <li><strong>Open Login:</strong> Tap the notification or click <strong>Connect Now</strong> above.</li>
-      <li><strong>Pay:</strong> Select your package and follow the M-Pesa prompts.</li>
-      <li><strong>Surf:</strong> You will be redirected and connected immediately.</li>
-    </ol>
-  </div>
-</section>
-
-<section>
-  <div class="card">
-    <h2>Customer Support</h2>
-    <p><strong>Call / WhatsApp:</strong> 0707683663</p>
-    <p><strong>Email:</strong> issues@namonet.org</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 PRIME NET | A Service by Namonet Solution Limited</p>
-</footer>
-
-<a class="whatsapp-float" href="https://wa.me/254707683663">
-  💬 Chat Support
-</a>
-
+<section><div class="card"><h2>Our Hotspot Packages</h2><p>Enjoy speeds of up to <strong>20 Mbps</strong> on any plan. Choose the one that fits your needs:</p><div class="pricing-grid"><div class="price-item"><span>1 Hour</span><strong>Ksh 5</strong></div><div class="price-item" style="border-color: rgb(37, 211, 102);"><span>24 Hours</span><strong>Ksh 20</strong></div><div class="price-item"><span>7 Days</span><strong>Ksh 100</strong></div></div></div></section>
+<section><div class="card"><h2>How to Connect</h2><ol><li><strong>Connect to Wi-Fi:</strong> Go to settings and select <strong>PRIME NET</strong>.</li><li><strong>Open Login:</strong> Tap the notification or click <strong>Connect Now</strong> above.</li><li><strong>Pay:</strong> Select your package and follow the M-Pesa prompts.</li><li><strong>Surf:</strong> You will be redirected and connected immediately.</li></ol></div></section>
+<section><div class="card"><h2>Customer Support</h2><p><strong>Call / WhatsApp:</strong> 0768648509</p><p><strong>Email:</strong> issues@namonet.org</p></div></section>
+<footer><p>© 2026 PRIME NET | A Service by Namonet Solution Limited</p></footer>
+<a class="whatsapp-float" href="https://wa.me/254768648509">💬 Chat Support</a>
 </body>
 </html>
